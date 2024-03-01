@@ -16,7 +16,7 @@ Route::get('/', function () {
 })->name('home');
 
 
-Route::get('test-api', 'sheetApiController@test');
+Route::get('test-api', 'sheetApiController@getdataQuantity');
 
 Route::get('tracking', 'sheetApiController@getPDTran');
 
