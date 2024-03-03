@@ -436,25 +436,24 @@ class sheetApiController extends Controller
 
         $number = 0;
 
-        dd($values);
 
-        // foreach($values as $key=> $val){
+        foreach($values as $key=> $val){
 
-        //     if($key>1){
+            if($key>1){
 
-        //         $insert['model'] = $val[0];
+                $insert['model'] = $val[1];
 
-        //         $insert['quantity'] =   !empty($val[10])?str_replace(',', '.', $val[10]):0;
+                $insert['quantity'] =   !empty($val[7])?str_replace(',', '.', $val[10]):0;
 
-        //         $insert['number']  = 1;
+                $insert['number']  = 1;
 
-        //         // 1 la ha noi
+                // 1 la ha noi
 
-        //         $insert['address'] = 1;
+                $insert['address'] = 2;
 
-        //         DB::table('fs_quantity')->insert($insert);
-        //     }    
-        // }
+                DB::table('fs_quantity')->insert($insert);
+            }    
+        }
 
         echo "thanh cong";
        
