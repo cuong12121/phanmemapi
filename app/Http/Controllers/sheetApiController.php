@@ -390,12 +390,24 @@ class sheetApiController extends Controller
 
         $values = $response->getValues();
 
-        echo "<pre>";
+        $number = 0;
 
-           print_r($values);
+        foreach($values as $val){
 
-        echo "</pre>";
+            $insert['model'] = $val[0];
 
+            $insert['quantity'] = $val[10];
+
+            $insert['number']  = 1;
+
+            // 1 la ha noi
+
+            $insert[['address'] = 1;
+
+            DB::table('fs-quantity')->insert($insert);
+        }
+
+        echo "thanh cong";
        
     }
 
