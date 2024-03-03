@@ -414,6 +414,52 @@ class sheetApiController extends Controller
        
     }
 
+    public function getdataQuantityMN()
+    {
+        $client = new \Google\Client();
+        $client->setApplicationName('Google Sheets API PHP');
+        $client->setScopes('https://www.googleapis.com/auth/spreadsheets');
+        $client->setAuthConfig(storage_path('app/key.json'));
+        $client->setAccessType('offline');
+        $client->setPrompt('select_account consent');
+
+        $service = new \Google\Service\Sheets($client);
+        $id_page = '1EojJFXhjcqAuhPXh8O7OgdIG0ut99fBIArSMy8obIHc'; 
+        $spreadsheetId = $id_page; 
+        $range = 'TONG HOP 3 KHO!A:H'; 
+
+        //phần nhận dữ liệu 
+
+        $response = $service->spreadsheets_values->get($spreadsheetId, $range);
+
+        $values = $response->getValues();
+
+        $number = 0;
+
+        dd($values);
+
+        // foreach($values as $key=> $val){
+
+        //     if($key>1){
+
+        //         $insert['model'] = $val[0];
+
+        //         $insert['quantity'] =   !empty($val[10])?str_replace(',', '.', $val[10]):0;
+
+        //         $insert['number']  = 1;
+
+        //         // 1 la ha noi
+
+        //         $insert['address'] = 1;
+
+        //         DB::table('fs_quantity')->insert($insert);
+        //     }    
+        // }
+
+        echo "thanh cong";
+       
+    }
+
 
     public function taskGetPrice($id_page, $pages)
     {
