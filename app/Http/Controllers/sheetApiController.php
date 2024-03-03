@@ -439,11 +439,11 @@ class sheetApiController extends Controller
 
         foreach($values as $key=> $val){
 
-            if($key>1){
+            if($key>2){
 
                 $insert['model'] = $val[1];
 
-                $insert['quantity'] =   !empty($val[7])?str_replace(',', '.', $val[10]):0;
+                $insert['quantity'] =   !empty($val[7])?str_replace(',', '.', $val[7]):0;
 
                 $insert['number']  = 1;
 
