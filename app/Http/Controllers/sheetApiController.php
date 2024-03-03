@@ -404,7 +404,7 @@ class sheetApiController extends Controller
 
             $insert['address'] = 1;
 
-            DB::table('fs-quantity')->insert($insert);
+            DB::table('fs_quantity')->insert($insert);
         }
 
         echo "thanh cong";
