@@ -398,7 +398,7 @@ class sheetApiController extends Controller
 
                 $insert['model'] = $val[0];
 
-                $insert['quantity'] = $val[10];
+                $insert['quantity'] =  str_replace(',', '.', $val[10]);
 
                 $insert['number']  = 1;
 
