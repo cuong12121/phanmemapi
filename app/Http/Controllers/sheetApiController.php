@@ -402,7 +402,7 @@ class sheetApiController extends Controller
 
             // 1 la ha noi
 
-            $insert[['address'] = 1;
+            $insert['address'] = 1;
 
             DB::table('fs-quantity')->insert($insert);
         }
