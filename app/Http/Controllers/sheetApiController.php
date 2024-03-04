@@ -470,7 +470,7 @@ class sheetApiController extends Controller
             $vals = DB::table('fs_product')->where('code', $value->model)->first();
 
             if(!empty($vals->id)){
-                 $update = DB::table('fs_quantity')->where('id', $value->id)->update(['product_id'=>$vals->id])
+                 $update = DB::table('fs_quantity')->where('id', $value->id)->update(['product_id'=>$vals->id]);
             }
 
         }
