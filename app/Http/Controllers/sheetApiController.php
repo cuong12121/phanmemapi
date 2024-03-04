@@ -459,6 +459,23 @@ class sheetApiController extends Controller
        
     }
 
+
+    public function runQuantity()
+    {
+        
+        $data = DB::table('fs_quantity')->where('address', 1)->get();
+
+        foreach($data as $value){
+
+            //lấy thông tin sản phẩm để update lại số lượng hàng hóa
+
+            $update = DB::table('s_warehouses_products')->where('product_id', $value->product_id)->where('warehouses_id', 1)->update(['amount'=>$value->quantity]);
+
+        }
+        echo "thành công";
+
+    }
+
     public function convertIDtoModel()
     {
         $data = DB::table('fs_quantity')->select('model','product_id', 'id')->get();
@@ -475,7 +492,6 @@ class sheetApiController extends Controller
 
         }
         echo "thành công";
-
 
     }
 
