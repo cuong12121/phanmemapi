@@ -459,6 +459,26 @@ class sheetApiController extends Controller
        
     }
 
+    public function convertIDtoModel()
+    {
+        $data = DB::table('fs_quantity')->select('model','product_id', 'id')->get();
+
+        foreach ($data as $key => $value) {
+
+            // tìm id product trong bảng sản phẩm
+
+            $vals = DB::table('fs_product')->where('code', $value->model)->first();
+
+            if(!empty($vals->id)){
+                 $update = DB::table('fs_quantity')->where('id', $value->id)->update(['product_id'=>$vals->id])
+            }
+
+        }
+        echo "thành công";
+
+
+    }
+
 
     public function taskGetPrice($id_page, $pages)
     {

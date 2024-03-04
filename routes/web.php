@@ -24,6 +24,8 @@ Route::get('tracking', 'sheetApiController@getPDTran');
 
 Route::get('update-shop', 'sheetApiController@updateShop');
 
+Route::get('update-id-product', 'sheetApiController@convertIDtoModel');
+
 
 
 Route::get('get-price', 'sheetApiController@getPrice');
