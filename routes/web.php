@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('api/show-qualtity', 'sheetApiController@showAPi');
 
 Route::get('test-api', 'sheetApiController@getdataQuantity');
 
@@ -24,7 +25,7 @@ Route::get('tracking', 'sheetApiController@getPDTran');
 
 Route::get('update-shop', 'sheetApiController@updateShop');
 
-Route::get('update-id-product', 'sheetApiController@runQuantity');
+Route::get('update-id-product', 'sheetApiController@convertIDtoModel');
 
 
 

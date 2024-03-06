@@ -469,6 +469,28 @@ class sheetApiController extends Controller
 
             return response()->json(['message'=> 'token not found'], 401);
         }
+        else{
+
+            $address = $_GET['address'];
+
+            $data = DB::table('fs_quantity')->where('address', $address)->get();
+
+            $datas = [];
+
+            foreach($data as $key=>$val){
+
+                $datas[$key]['model'] = $val->model;
+                $datas[$key]['quantity'] = $val->quantity;
+                $datas[$key]['address'] = $val->address;
+                $datas[$key]['product_id'] = $val->product_id;
+
+
+            }
+
+            echo json_encode($datas);
+
+
+        }
        
     }
 
