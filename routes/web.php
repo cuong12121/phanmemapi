@@ -21,6 +21,8 @@ Route::get('test-api', 'sheetApiController@getdataQuantity');
 
 Route::get('test-api-1', 'sheetApiController@getdataQuantityMN');
 
+Route::get('run-quantity', 'sheetApiController@runQuantity');
+
 Route::get('tracking', 'sheetApiController@getPDTran');
 
 Route::get('update-shop', 'sheetApiController@updateShop');
