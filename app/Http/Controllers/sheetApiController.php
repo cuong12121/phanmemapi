@@ -507,6 +507,16 @@ class sheetApiController extends Controller
             $update = DB::table('fs_warehouses_products')->where('product_id', $value->product_id)->where('warehouses_id', 1)->update(['amount'=>$value->quantity]);
 
         }
+
+        $datas = DB::table('fs_quantity')->where('address', 2)->get();
+
+        foreach($datas as $value){
+
+            //lấy thông tin sản phẩm để update lại số lượng hàng hóa
+
+            $update = DB::table('fs_warehouses_products')->where('product_id', $value->product_id)->where('warehouses_id', 2)->update(['amount'=>$value->quantity]);
+
+        }
         echo "thành công";
 
     }
