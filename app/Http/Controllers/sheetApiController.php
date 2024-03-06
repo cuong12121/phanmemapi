@@ -460,6 +460,19 @@ class sheetApiController extends Controller
     }
 
 
+    public function showAPi()
+    {
+
+        $token = $request->header('token');
+
+        if($token != 'yjzcbvngslvejdqxcadkzskokspfnjge'){
+
+            return response()->json(['message'=> 'token not found'], 401);
+        }
+       
+    }
+
+
     public function runQuantity()
     {
         
