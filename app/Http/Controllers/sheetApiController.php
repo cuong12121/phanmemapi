@@ -460,7 +460,7 @@ class sheetApiController extends Controller
     }
 
 
-    public function showAPi()
+    public function showAPi(Request $request)
     {
 
         $token = $request->header('token');
