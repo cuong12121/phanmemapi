@@ -354,6 +354,10 @@
                 <i class="ion-ios-person-outline"></i>
                 <span>Lợi nhuận gian hàng</span>
             </a></li>
+            <li class="active"><a href="#">
+                <i class="ion-ios-person-outline"></i>
+                <span>Kho</span>
+            </a></li>
             <li class="has-sub">
                 <a href="#">
                     <i class="ion-ios-person-outline"></i>
