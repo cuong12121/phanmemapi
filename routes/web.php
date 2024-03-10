@@ -1,4 +1,4 @@
-<?php
+--<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +29,7 @@ Route::get('update-shop', 'sheetApiController@updateShop');
 
 Route::get('update-id-product', 'sheetApiController@convertIDtoModel');
 
+Route::get('get-data-to-sheet', 'sheetApiController@runPriceToDrive');
 
 
 Route::get('get-price', 'sheetApiController@getPrice');

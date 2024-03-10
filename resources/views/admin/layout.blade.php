@@ -389,7 +389,7 @@
 
     @yield('content')
 
-    <span id="show-lable">Hello</span>
+
 
     <script type="text/javascript">
         $('#toggle-left-menu').click(function() {

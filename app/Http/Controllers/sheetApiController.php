@@ -369,6 +369,18 @@ class sheetApiController extends Controller
 
     }
 
+    public function runPriceToDrive()
+    {
+        $number =2;
+
+        $this->getdataQuantity();
+
+        $this->getdataQuantityMN();
+        
+        echo "thanh cong";
+
+    }
+
 
     public function getdataQuantity()
     {
