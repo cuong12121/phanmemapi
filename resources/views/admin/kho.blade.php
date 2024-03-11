@@ -28,6 +28,8 @@
 
         var $this = $(this);
         $this.button('loading');
+
+        alert('đang lấy dữ liệu');
         
         //  $.ajaxSetup({
         //     headers: {
