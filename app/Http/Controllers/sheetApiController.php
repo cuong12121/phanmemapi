@@ -373,16 +373,16 @@ class sheetApiController extends Controller
     {
         $number =2;
 
-        $this->getdataQuantity();
+        $this->getdataQuantity($number);
 
-        $this->getdataQuantityMN();
+        $this->getdataQuantityMN($number);
         
         echo "thanh cong";
 
     }
 
 
-    public function getdataQuantity()
+    public function getdataQuantity($number)
     {
         $client = new \Google\Client();
         $client->setApplicationName('Google Sheets API PHP');
@@ -412,7 +412,7 @@ class sheetApiController extends Controller
 
                 $insert['quantity'] =   !empty($val[10])?str_replace(',', '.', $val[10]):0;
 
-                $insert['number']  = 1;
+                $insert['number']  = $number;
 
                 // 1 la ha noi
 
@@ -426,7 +426,7 @@ class sheetApiController extends Controller
        
     }
 
-    public function getdataQuantityMN()
+    public function getdataQuantityMN($number)
     {
         $client = new \Google\Client();
         $client->setApplicationName('Google Sheets API PHP');
@@ -457,7 +457,7 @@ class sheetApiController extends Controller
 
                 $insert['quantity'] =   !empty($val[7])?str_replace(',', '.', $val[7]):0;
 
-                $insert['number']  = 1;
+                $insert['number']  = $number;
 
                 // 1 la ha noi
 
