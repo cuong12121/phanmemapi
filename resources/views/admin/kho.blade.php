@@ -15,7 +15,7 @@
 
         <br>
 
-        <button>cập nhật lại tồn </button> 
+        <!-- <button>cập nhật lại tồn </button>  -->
         
     </div>
 </div>
