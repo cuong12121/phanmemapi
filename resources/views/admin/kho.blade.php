@@ -11,7 +11,7 @@
 
     <div id="page-container">
         
-        <button id="get-data-sheet">lấy dữ liệu từ sheet</button>    
+        <button id="get-data-sheet" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Đang lấy dữ liệu">lấy dữ liệu từ sheet</button>    
 
         <br>
 
@@ -29,7 +29,7 @@
         var $this = $(this);
         $this.button('loading');
 
-        alert('đang lấy dữ liệu');
+       
         
         //  $.ajaxSetup({
         //     headers: {
