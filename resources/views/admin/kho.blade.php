@@ -11,7 +11,7 @@
 
     <div id="page-container">
         
-        <button>lấy dữ liệu từ sheet</button>    
+        <button id="get-data-sheet">lấy dữ liệu từ sheet</button>    
 
         <br>
 
@@ -19,3 +19,31 @@
         
     </div>
 </div>
+
+<script type="text/javascript">
+
+    $('#get-data-sheet').click(function() {
+        
+         $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            type: 'POST',
+            url: "{{ route('get_data_to_sheet') }}",
+           
+           
+            success: function(result){
+               
+                alert('thành công');
+            }
+        });
+    })
+
+   
+    
+</script>
+
+

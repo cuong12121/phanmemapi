@@ -34,7 +34,7 @@ Route::get('get-data-to-sheet', 'sheetApiController@runPriceToDrive');
 
 Route::group(['prefix' => 'admins'], function() {
 
-    Route::get('get-data-to-sheet', 'sheetApiController@runPriceToDrive');
+    Route::post('get-data-to-sheet', 'sheetApiController@runPriceToDrive')->name('get_data_to_sheet');
 
     Route::get('kho', 'khoController@index')->name('kho.admin');
 
