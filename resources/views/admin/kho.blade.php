@@ -25,27 +25,29 @@
 <script type="text/javascript">
 
     $('#get-data-sheet').click(function() {
-        
-         $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
 
-        $.ajax({
-            type: 'POST',
-            url: "{{ route('get_data_to_sheet') }}",
+        var $this = $(this);
+        $this.button('loading');
+        
+        //  $.ajaxSetup({
+        //     headers: {
+        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        //     }
+        // });
+
+        // $.ajax({
+        //     type: 'POST',
+        //     url: "{{ route('get_data_to_sheet') }}",
            
            
-            success: function(result){
+        //     success: function(result){
                
-                alert('thành công');
-            }
-        });
+        //         alert('thành công');
+        //     }
+        // });
     })
 
-   
-    
+
 </script>
 
 
