@@ -20,6 +20,8 @@
     </div>
 </div>
 
+@push('js')
+
 <script type="text/javascript">
 
     $('#get-data-sheet').click(function() {
@@ -47,3 +49,4 @@
 </script>
 
 
+@endpush

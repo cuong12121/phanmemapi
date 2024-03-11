@@ -496,3 +496,5 @@
             }
         }
     </script>
+
+    @stack('js')
