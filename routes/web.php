@@ -32,6 +32,17 @@ Route::get('update-id-product', 'sheetApiController@convertIDtoModel');
 Route::get('get-data-to-sheet', 'sheetApiController@runPriceToDrive');
 
 
+Route::group(['prefix' => 'admins'], function() {
+
+    Route::get('get-data-to-sheet', 'sheetApiController@runPriceToDrive');
+
+    Route::get('kho', 'khoController@index')->name('kho.admin');
+
+
+
+});    
+
+
 Route::get('get-price', 'sheetApiController@getPrice');
 
 Route::get('crawl-site-tinh-te', 'crawlController@getLink');
